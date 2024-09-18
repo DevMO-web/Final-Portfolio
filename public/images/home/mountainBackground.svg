@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1921 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e4e6e8;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        filter: url(#AI_Turbulence_5);
+        opacity: .18;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <filter id="AI_Turbulence_5" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence baseFrequency="0.4" numOctaves="4" result="turb" type="fractalNoise"/>
+      <feComposite in="turb" in2="SourceAlpha" operator="in"/>
+    </filter>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" x="1" width="1920" height="1080"/>
+      <g class="cls-3">
+        <path class="cls-2" d="M1,785.96l64.18-4.7c3.7-.27,7.29-1.36,10.51-3.19l268.26-152.25c2.05-1.16,3.93-2.61,5.57-4.3l151.87-155.94,420.89-286.63c3.66-2.5,8.25-3.24,12.51-2.04l155.03,43.71c.95.27,1.94.39,2.93.37l266.44-5.73c5.9-.13,11.56,2.36,15.45,6.79l55.39,63.02c.88,1,2.13,1.61,3.47,1.69l363.48,21c2.04.12,4.04.65,5.86,1.57l28.12,14.11c4.18,2.1,7.49,5.6,9.36,9.88l80.67,185.09v559.6H1v-292.04Z"/>
+      </g>
+      <path class="cls-2" d="M0,785.96l64.18-4.7c3.7-.27,7.29-1.36,10.51-3.19l268.26-152.25c2.05-1.16,3.93-2.61,5.57-4.3l151.87-155.94,420.89-286.63c3.66-2.5,8.25-3.24,12.51-2.04l155.03,43.71c.95.27,1.94.39,2.93.37l266.44-5.73c5.9-.13,11.56,2.36,15.45,6.79l55.39,63.02c.88,1,2.13,1.61,3.47,1.69l363.48,21c2.04.12,4.04.65,5.86,1.57l28.12,14.11c4.18,2.1,7.49,5.6,9.36,9.88l80.67,185.09v559.6H0v-292.04Z"/>
+    </g>
+  </g>
+</svg>

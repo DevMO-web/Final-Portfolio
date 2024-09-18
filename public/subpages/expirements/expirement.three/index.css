@@ -1,0 +1,619 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+@font-face {
+    font-family: 'Josefin';
+    src: url("fonts/JosefinSans-VariableFont_wght.ttf") format('truetype');
+}
+
+:root{
+  
+    --primary-font:  'Josefin', sans-serif;
+    --secondary-font: Helvetica, sans-serif;
+    --error-font: Helvetica, sans-serif;; 
+    --green-tone-one: #353A34;
+    --main-light: #EEEEEE;
+    --main-medium: #D9D9D9;
+    --main-dark: #464646;
+    --main-Xdark: #1E1E1E;
+    --cta-color: #A1968C;
+    --background-color: #E4E6E8;
+    --error-color: lightcoral;
+    --success-color: forestgreen;
+
+    ---heading-fs: 1.2rem;
+    --body-fs: 1rem;
+    --line-height-hero: 2;
+    --line-height-main: 1.3;
+
+    --lg-padding-width: 1rem 3rem;
+    --sm-padding-width: 0 2%;
+
+    --outer-padding: 0 2%;
+    --inner-padding: 0 2%;
+    --inner-boundry-limit: 1200px;
+    --section-divider: 13.5rem;
+    --section-divider-mobile: 32%;
+    --padding-test: 1em .75em;
+    --z-index-negative-2: -10; 
+    --z-index-negative-1: -5; 
+    --z-index-plus-1: 5;
+    --z-index-plus-2: 10;
+    --z-index-plus-3: 15;
+
+}
+a {
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+    user-select: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    
+    font-size: 1.2rem;
+    font-family: var(--secondary-font);
+    position: relative;
+    background-color: white;
+
+}
+
+
+
+button{
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------------*/
+/* ===============
+Layout Settings : lyt1
+   =============== */
+/*------------------------------------*/
+
+#lyt1{
+    background-color: white;
+    font-family: var(--primary-font);
+}
+
+#lyt1-header{
+   position: relative;
+}
+
+#lyt1-header > div{
+    position: relative;
+    height: 100vh; 
+    height: calc(100vh - 2em);
+    margin: 1em;
+}
+
+
+/*------------------------------------*/
+/* ===============
+Patrtials : Header - ph1
+   =============== */
+/*------------------------------------*/
+
+/* Header Main Container Settings */
+#ph1{
+   background: transparent;
+   position: relative;
+
+   /*change to sticky
+   position: sticky;
+   top:0;
+
+   
+   */
+
+  
+}
+
+/*Header Main Wrapper Settings*/
+#ph1 > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#ph1 ul{
+    display: flex;
+}
+/*Example
+
+#ph1 ul li{
+    padding: 1rem .75rem;;
+
+}
+#ph1 ul:last-child li{
+    padding-right: 0;
+}
+*/
+
+#ph1 ul li a{
+    cursor: pointer;
+  
+}
+
+
+/*-----------------Specific Design-------------------*/
+header.ph1-header-container{
+   
+    padding: var(--inner-padding);
+    padding-top: 1rem;
+}
+div.ph1_name-wrapper span{
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--green-tone-one);
+}
+
+ul.ph1__nav-wrapper li{
+    padding: 1rem .75rem;
+}
+
+ul.ph1__nav-wrapper:last-child li{
+    padding-right: 0;
+    
+}
+ul.ph1__nav-wrapper li a{
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .9rem;
+    padding: 1rem 1.5rem;
+    color: var(--green-tone-one);
+    font-family: var(--primary-font);
+    line-height: 1;
+
+}
+
+ul.ph1__nav-wrapper li:last-child a{
+    border: 2px var(--green-tone-one) solid;
+   
+    
+}
+
+
+/*------------------------------------*/
+/* ===============
+Section : Hero - s-hero1
+   =============== */
+/*------------------------------------*/
+
+/* Header Hero Container Settings */
+
+/* Absolute here allows content to underlap the header info if header is set to transparent */
+/*It will float to the top wrapper, which has a relative postion to stop body content from overlapping hero*/
+#s-hero1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: var(--z-index-negative-2);
+ }
+ 
+ /*Header Hero Wrapper Settings*/
+ #s-hero1 > div {
+    height: 100%;
+ }
+
+  /*Header Hero Text Settings*/
+ #s-hero1 > div > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+ /*Header Main Text Settings*/
+#s-hero1 > div > div::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    background-image: url(images/hero.jpg);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-index-negative-2);
+} 
+ 
+    
+ 
+ /*-----------------Specific Design-------------------*/
+
+
+ div.s-hero1_text-wrapper hgroup{
+    font-family: var(--primary-font);
+    color: var(--green-tone-one);
+    text-transform: uppercase;
+    text-align: center;
+ }
+
+ div.s-hero1_text-wrapper hgroup h1{
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+ }
+
+
+ /*------------------------------------*/
+/* ===============
+Section : Article - s-3c1
+   =============== */
+/*------------------------------------*/
+
+
+#s-3c1 > div{
+    max-width: var(--inner-boundry-limit);
+    margin: 0 auto;
+    
+}
+/* Header Hero Container Settings */
+
+#s-3c1 > * [s-3c1-grid="grid"]{
+    --gap: 2%;
+    /*breaks after 3% becuase of max-width?*/
+    --column-count: 3;
+    --gap-calc: calc(var(--gap) * var(--column-count));
+    gap:var(--gap);
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fill,
+      minmax(clamp(clamp(calc((100%/3) - var(--gap-calc)), (800px - 100vw)*1000, 30%), (700px - 100vw)*1000, 100%)
+      /* if(screen> 800px) 33% else(screen> 700px) 30% else 100% */
+      ,1fr));
+   
+    
+}
+
+#s-3c1 > * [s-3c1-indv="wrapper"]{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+#s-3c1 img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*this controls overall height of the columns*/
+    max-height: 300px;
+}
+
+#s-3c1  div.s-3c1___card-content-image-container{
+    width: 100%;
+    height: 100%;
+    /*important! keeps the image size consistent with container*/
+    display: flex;
+}
+
+/*-----------------Specific Design-------------------*/
+section.s-3c1-container{
+    padding: 12% 0;
+    background-color: #F4F6F3;
+}
+
+div.s-3c1_title-container{
+    margin: 3% 0;
+}
+div.s-3c1_title-wrapper{
+  
+    text-align: center;
+    padding: 3% 0;
+}
+div.s-3c1_title-wrapper h2{
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    color: var(--green-tone-one);
+}
+
+div.s-3c1__indiv-card-container{
+   
+    box-shadow: 0px 0px 10px 0px var(--main-dark);
+  }
+
+
+div.s-3c1___card-content-text-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FDFDFD;
+}
+
+div.s-3c1___card-content-text-wrapper{
+    padding: 2rem;
+}
+
+div.s-3c1___card-content-text-container h3{
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 400;
+    color: var(--green-tone-one);
+    text-align: center;
+}
+
+
+ /*------------------------------------*/
+/* ===============
+Section : About- s-2c1
+   =============== */
+/*------------------------------------*/
+
+
+#s-2c1 > div{
+    /*max-width: var(--inner-boundry-limit);*/
+    margin: 0 auto;
+    
+}
+
+
+#s-2c1 div.s-2c1__card-indiv-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+#s-2c1  div.s-2c1___card-main-image-container{
+    width: 100%;
+    height: 100%;
+    /*important! keeps the image size consistent with container*/
+    display: flex;
+
+   
+}
+
+#s-2c1 div.s-2c1___card-content-container,div.s-2c1___card-main-image-container{
+    flex: 1 1 38ch; /* Allows the flex items to grow and shrink, but sets a minimum width of x-ch */
+
+}
+
+#s-2c1 img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    /*this controls overall height of the columns*/
+    
+}
+
+#s-2c1 div.s-2c1___card-content-container{
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+}
+/*-----------------Specific Design-------------------*/
+
+div.s-2c1___card-content-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+  
+}
+div.s-2c1____card-content-title-wrapper{
+    padding: 3rem 0;
+}
+div.s-2c1____card-content-title-wrapper h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--green-tone-one);
+    font-size: 1.75rem;
+}
+div.s-2c1____card-content-text-wrapper {
+    text-align: justify;
+    font-size: 1.25rem;
+    width: 100%;
+    max-width: 40ch;
+    min-width: 35ch
+}
+
+div.s-2c1____card-content-text-wrapper p {
+    text-align: justify;
+    font-size: clamp(.9rem, 2vw, 1.15rem);
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--green-tone-one);
+}
+
+
+
+
+
+
+/*------------------------------------*/
+/* ===============
+Patrtials : Component - s-nl1 / c-nl1
+   =============== */
+/*------------------------------------*/
+
+/* Header Main Container Settings */
+
+#s-nl1 > div{
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 45ch) 1fr;
+ 
+
+}
+
+#s-nl1 > div > div{
+    grid-column: 2;
+    
+    padding: 0 3%;
+ 
+
+}
+
+#c-nl1 input{
+    padding: .7rem 1rem;
+    border: 0;
+}
+
+#c-nl1 input:focus{
+
+    outline: none !important;
+	border: 2px var(--green-tone-one) solid;
+
+}
+
+
+
+
+
+
+/*-----------------Specific Design-------------------*/
+section.s-nl1-container{
+    background: #E1E6E0;
+    padding: 6% 0;
+}
+
+
+div.s-nl1_title-wrapper{
+    text-align: center;
+    padding: 3% 0;
+}
+div.s-nl1_title-wrapper h2{
+    font-weight: 700;
+    color: var(--green-tone-one);
+    font-size: 1.75rem;
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 600;
+}
+
+div.s-nl1_title-wrapper p{
+    font-weight: 400;
+    color: var(--green-tone-one);
+    
+}
+div.c-nl1_input-wrapper input{
+    background: #EFF4EE;
+    width: 100%;
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    height: 3rem;
+    color: var(--green-tone-one);
+}
+div.c-nl1_button-wrapper{
+    margin-top: 6%;
+}
+div.c-nl1_button-wrapper button{
+    
+    border: 1px var(--green-tone-one) solid;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .9rem;
+    padding: 1rem 1.5rem;
+    color: var(--green-tone-one);
+    font-family: var(--primary-font);
+    line-height: 1;
+    cursor: pointer;
+}
+
+div.c-nl1_button-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+/*------------------------------------*/
+/* ===============
+Patrtials : Header - pf2c1
+   =============== */
+/*------------------------------------*/
+
+/* Header Main Container Settings */
+
+ 
+ /*Header Main Wrapper Settings*/
+ #p-f2c1 > div {
+     display: flex;
+     justify-content: space-between;
+     align-items: baseline;
+ }
+ 
+ #p-f2c1 ul{
+     display: flex;
+ }
+ 
+ #p-f2c1 li a{
+     cursor: pointer;
+   
+ }
+ 
+ #p-f2c1 div.p-f2c1_icon-wrapper{
+    display: flex;
+    gap: 5%;
+ }
+ #p-f2c1 div.p-f2c1__icon-indiv-wrapper{
+    background: var(--green-tone-one);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #p-f2c1 div.p-f2c1__icon-indiv-wrapper a{
+    /*to align image to center*/
+    display: flex;
+ }
+ /*-----------------Specific Design-------------------*/
+
+ div.p-f2c1-wrapper{
+    padding: 3%;
+ }
+
+ div.p-f2c1__icon-indiv-wrapper{
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+
+ }
+
+
+
+ div.p-f2c1__icon-indiv-wrapper img{
+    width: 25px;
+    height: 25px;
+ }
+
+ ul.p-f2c1__nav-wrapper li{
+    padding: 0 1.25rem;
+ }
+
+ ul.p-f2c1__nav-wrapper:last-child li{
+    padding-right: 0;
+ }
+
+
+
+ ul.p-f2c1__nav-wrapper li a{
+    letter-spacing: .15em;
+    padding: 1rem 1.25rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+ }
+
